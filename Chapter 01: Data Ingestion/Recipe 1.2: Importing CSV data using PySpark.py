@@ -23,5 +23,5 @@ df.printSchema()
 df.write
   .format("delta")
   .mode("overwrite")
-  .saveAsTable("default.t1_bronze_poss_sales")
+  .saveAsTable("default.t1_bronze_pos_sales")
 )
