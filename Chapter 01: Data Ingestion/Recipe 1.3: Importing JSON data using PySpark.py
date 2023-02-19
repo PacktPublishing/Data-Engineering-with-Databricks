@@ -1,4 +1,9 @@
 # Databricks notebook source
+# MAGIC %sql
+# MAGIC create table sample;
+
+# COMMAND ----------
+
 # DBTITLE 1,Reading multiple JSON files at the same time
 df = (
   spark.read

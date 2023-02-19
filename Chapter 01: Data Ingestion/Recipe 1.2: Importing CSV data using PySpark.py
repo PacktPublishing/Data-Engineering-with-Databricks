@@ -16,3 +16,12 @@ display(df)
 # COMMAND ----------
 
 df.printSchema()
+
+# COMMAND ----------
+
+(
+df.write
+  .format("delta")
+  .mode("overwrite")
+  .saveAsTable("default.t1_bronze_poss_sales")
+)
