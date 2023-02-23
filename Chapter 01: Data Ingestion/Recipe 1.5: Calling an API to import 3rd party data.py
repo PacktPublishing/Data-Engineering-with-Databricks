@@ -18,6 +18,10 @@ display(spark_df)
 
 # COMMAND ----------
 
+spark_df.printSchema()
+
+# COMMAND ----------
+
 (
 spark_df.write
         .format("delta")

@@ -7,8 +7,8 @@
 # DBTITLE 1,Reading multiple JSON files at the same time
 df = (
   spark.read
-       .format("json")
-       .load("/mnt/00-mchan-demo/databricks-cookbook/ch01_r03/")
+       .option('inferSchema', 'true')
+       .json("/mnt/00-mchan-demo/databricks-cookbook/ch01_r03/v1")
 )
 
 display(df)
@@ -40,7 +40,11 @@ schema = StructType(
 )
 
 df = (
-  spark.read.format("json").option("multiline","true").schema(schema).load("/mnt/00-mchan-demo/databricks-cookbook/ch01_r03/v2")
+  spark.read
+       .format("json")
+       .option("multiline","true")
+       .schema(schema)
+       .load("/mnt/00-mchan-demo/databricks-cookbook/ch01_r03/v2")
 )
 
 display(df)
