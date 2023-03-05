@@ -1,11 +1,11 @@
 # Databricks notebook source
-# DBTITLE 1,Create the Delta table 
+# DBTITLE 0,Create the Delta table 
 # MAGIC  %sql  
 # MAGIC  CREATE TABLE t1_bronze_pos_sales;
 
 # COMMAND ----------
 
-# DBTITLE 1,Configure COPY INTO 
+# DBTITLE 0,Configure COPY INTO 
 # MAGIC %sql
 # MAGIC COPY INTO t1_bronze_pos_sales
 # MAGIC FROM 's3://databricks-cookbook/ch01_r01/' -- replace with your Cloud Storage path -- 

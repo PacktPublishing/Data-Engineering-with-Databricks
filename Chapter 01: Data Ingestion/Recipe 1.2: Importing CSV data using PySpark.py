@@ -1,5 +1,5 @@
 # Databricks notebook source
-# DBTITLE 1,Ingest the data 
+# DBTITLE 0,Ingest the data 
 s3Path = "/mnt/00-mchan-demo/databricks-cookbook/ch01_r01/"
 
 df = (

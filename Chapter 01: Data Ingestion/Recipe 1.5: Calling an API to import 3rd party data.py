@@ -5,8 +5,13 @@ import pandas as pd
 
 # COMMAND ----------
 
+# replace with a city you would like to extract weather information on
 city = "Toronto"
-apiKey = "xxx" # replace with your own API key# 
+
+# replace with your own API key or token# 
+apiKey = "xxx"
+
+# API URL 
 apiURL = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}&units=metric"
 
 r = requests.get(apiURL)
